@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начало</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="bg-dark text-white py-3">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand mr-3" href="#">
+                <img src="{% static '/media/gold_logo.png' %}" alt="GATO 2020 Лого" class="logo" style="max-width: 75px; max-height: 75px;">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">
+                            <i class="fas fa-home"></i> Начало
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'important_clients_list' %}">
+                            <i class="fas fa-users"></i> Ключови клиенти
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'product_list' %}">
+                            <i class="fas fa-shopping-bag"></i> Продукти
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-envelope"></i> Контакти
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">  <!-- Променено ml-10 на ml-auto -->
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile' %}">
+                            <i class="fas fa-user" style="color: green;"></i> {{ user.username }}
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+{% block main_content %}
+{% endblock %}
+
+<footer class="bg-dark text-white py-3 fixed-bottom"> <!-- Добавен fixed-bottom клас -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>© 2024 Примерен Уеб Сайт. Всички права запазени.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and Font Awesome JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+</body>
+</html>

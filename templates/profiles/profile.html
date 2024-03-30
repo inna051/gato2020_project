@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block main_content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="{% url 'profile' %}" class="list-group-item list-group-item-action active">Профил</a>
+                <a href="#" class="list-group-item list-group-item-action">Моите поръчки</a>
+                <a href="{% url 'logout' %}" class="list-group-item list-group-item-action">Изход</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h2>Информация за профила</h2>
+            <p>Тук показваме информация за профила на потребителя, като име, е-поща, и т.н.</p>
+            
+            <h2>Промяна на профила</h2>
+            <form method="POST" action="#">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Запази промените</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

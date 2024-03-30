@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">Welcome to User Profiles</h1>
+                        <p class="card-text text-center">This is the home page for user profiles.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="{% url 'login' %}" class="btn btn-primary btn-block">Login</a></li>
+                            <li class="list-group-item"><a href="{% url 'register' %}" class="btn btn-secondary btn-block">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{%  endblock %}

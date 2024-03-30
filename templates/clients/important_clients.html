@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+
+    <div class="container">
+        <h1 class="mt-5 mb-4">Ключови клиенти</h1>
+        <div class="row">
+            {% for client in clients %}
+            <div class="col-md-4">
+                <div class="card client-card">
+                    <img src="{{ client.image.url }}" class="card-img-top" alt="{{ client.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ client.name }}</h5>
+                        <p class="card-text">{{ client.address }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'add_client' %}" class="btn btn-primary mt-4">Add New Client</a>
+    </div>
+
+{% endblock %}
