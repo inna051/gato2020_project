@@ -1,4 +1,3 @@
-from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
@@ -11,7 +10,7 @@ urlpatterns = [
     path('main/', include('gato2020.main.urls')),
     path('products/', include('gato2020.products.urls')),
     path('profiles/', include('gato2020.profiles.urls')),
-#    path('map/', include('gato2020.map.urls')),
+    path('map/', include('gato2020.map.urls')),
     path('clients/', include('gato2020.clients.urls')),
 
 ]

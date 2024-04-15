@@ -12,8 +12,6 @@
         </div>
         <div class="col-md-9">
             <h2>Информация за профила</h2>
-            <p>Тук показваме информация за профила на потребителя, като име, е-поща, и т.н.</p>
-            
             <h2>Промяна на профила</h2>
             <form method="POST" action="#">
                 {% csrf_token %}
@@ -24,3 +22,39 @@
 </div>
 
 {% endblock %}
+
+{% block footer %}
+<footer class="footer mt-auto">
+    <div class="container-fluid bg-dark text-white">
+        <div class="row">
+            <div class="col">
+                <p>© 2024 Примерен Уеб Сайт. Всички права запазени.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
+<style>
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        margin-bottom: 60px;
+        padding-bottom: 60px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #343a40;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 100px;
+    }
+</style>
+

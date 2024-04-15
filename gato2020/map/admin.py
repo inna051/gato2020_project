@@ -1,3 +1,19 @@
 from django.contrib import admin
+from .models import City
 
-# Register your models here.
+@admin.register(City)
+class CityAdmin(admin.ModelAdmin):
+    list_display = ('name', 'latitude', 'longitude')
+
+    list_filter = ('name',)
+
+    search_fields = ['name']
+
+    ordering = ('name',)
+
+    fieldsets = (
+        ('Населени места', {
+            'fields': ('name', 'latitude', 'longitude')
+        }),
+    )
+

@@ -1,19 +1,51 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
+{% block main_content %}
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h1 class="mb-4">Add Product</h1>
+            <h1 class="mb-4">Добави продукт:</h1>
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="mb-7 btn btn-primary">Add Product</button>
+                <div class="form-group">
+                    <label for="id_category">Категория:</label>
+                    {{ form.category }}
+                </div>
+                <div class="form-group">
+                    <label for="id_name">Име:</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-group">
+                    <label for="id_package_weight">Кг/пакет:</label>
+                    {{ form.package_weight }}
+                </div>
+                <div class="form-group">
+                    <label for="id_arabica">Арабика (%):</label>
+                    {{ form.arabica }}
+                </div>
+                <div class="form-group">
+                    <label for="id_robusta">Робуста (%):</label>
+                    {{ form.robusta }}
+                </div>
+                <div class="form-group">
+                    <label for="id_image">Изображение:</label>
+                    {{ form.image }}
+                </div>
+                <div class="form-group">
+                    <label for="id_origin">Произход:</label>
+                    {{ form.origin }}
+                </div>
+                <div class="form-group">
+                    <label for="id_description">Описание:</label>
+                    {{ form.description }}
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Запази</button> 
             </form>
         </div>
     </div>
 </div>
+    
 
 {% endblock %}
 

@@ -1,10 +1,52 @@
 {% extends 'base.html' %}
 {% block main_content %}
+    {% load static %}
+
     
 <div class="container">
     <div class="main-content py-4">
-        <h2>Главно Съдържание</h2>
-        <p>Тук е мястото за вашия основен текст, изображения и друго съдържание.</p>
+        
+        <div class="section">
+            <div class="row">
+                <div class="col-md-6 text-center" style="margin-top: 10px">
+                    <h2 style="font-size: 26px;">Добре дошли в света на Гато 2020 - водещ дистрибутор на Нестле продукти за североизточна България</h2>
+                    <p style="font-size: 20px;">Здравейте, ние сме официален партньор на Нестле България и предлагаме широка гама от кафе, напитки и машини, които ще задоволят всяко желание за качествено кафе на вашите клиенти. След три години на устойчив растеж и развитие, Гато 2020 се утвърди като водещ дистрибутор в региона, сътрудничейки с най-големите имена в индустрията. Разберете повече за нашата история, екип и услуги, които предлагаме!</p>
+                </div>
+                <div class="col-md-6 text-center" style="border-radius: 15px; overflow: hidden;">
+                    <img src="{% static '/media/our_team.jpg' %}" alt="Добре дошли в Гато 2020" class="img-fluid" style="max-width: 500px; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="row">
+                <div class="col-md-6 order-md-2 text-center" style="margin-top: 40px">
+                    <h2 style="font-size: 26px;">Нашата демо зала</h2>
+                    <p style="font-size: 20px;">Освен това, с голямо удоволствие обявяваме, че от скоро разполагаме с най-новата си демо зала в град Варна! Това е единственото място в региона, където можете да откриете разнообразни блендове на кафе и напитки, представени от опитни баристи. Всеки един клиент е добре дошъл в нашата демо зала, където ще откриете нови вкусове и ще се насладите на уникално кафе преживяване.</p>
+                </div>
+                <div class="col-md-6 order-md-1" style="border-radius: 15px; overflow: hidden;">
+                    <img src="{% static '/media/demo_room.jpg' %}" alt="Демо зала на Гато 2020" class="img-fluid" style="max-width:500px; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="section">
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin-bottom: 10px;">
+                    <h2 style="font-size: 26px;">Сътрудничество с нас</h2>
+                    <p style="font-size: 20px;">Възможността за сътрудничество с нас е само на едно кликване разстояние! Попълнете нашия формуляр за регистрация и ние ще се свържем с вас възможно най-скоро, за да уговорим среща с един от нашите търговски представители. Ние вярваме в персоналния подход и сме готови да ви предоставим най-доброто обслужване и решения за вашите нужди.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="{% static '/media/diff_blend_coffee.jpg' %}" alt="Сътрудничество с Гато 2020" class="img-fluid" style="width: 400px; border-radius: 15px;">
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static '/media/coffee_cup.jpg' %}" alt="Сътрудничество с Гато 2020" class="img-fluid" style="width: 400px; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

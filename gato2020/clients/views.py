@@ -14,4 +14,4 @@ def add_client(request):
             return redirect('important_clients_list')
     else:
         form = ImportantClientForm()
-    return render(request, 'add_client.html', {'form': form})
+    return render(request, 'clients/add_client.html', {'form': form})
